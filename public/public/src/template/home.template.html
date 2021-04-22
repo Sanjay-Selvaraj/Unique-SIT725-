@@ -1,0 +1,27 @@
+<ui-view>
+  <main>
+      <div class="container">
+          <div class="row center">
+          <h1 class="title">
+            <b>Unique a new way of shopping</b>
+          </h1>
+      </div>
+      </div>
+      <div class="row">
+        <div ng-repeat="item in category.data" class="col s12 m4 ">
+          <div class="card">
+            <div class="card-image">
+              <img ng-src="{{item.img}}">
+              <span class="card-title">{{item.product}}</span>
+            </div>
+            <div class="card-content">
+              <p>{{item.short_description}}</p>
+            </div>
+            <div class="card-action">
+              <a ui-sref="home.product({productName:item.product})"><b>Browse Products</b></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+</ui-view>

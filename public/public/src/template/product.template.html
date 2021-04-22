@@ -1,0 +1,46 @@
+<ui-view>
+<main>
+
+    <div class="container";>
+        <div class="row center">
+        <h1 class="title"><br><b>{{items.data.product}}</b></h1>
+    </div>
+    </div>
+   <br>
+    
+    <div class="product-grid grid-2">
+        <div ng-repeat="item in items.list" class="product-item">
+            <div class="product-single">
+                <div class="product-img">
+                    <img ng-src="{{item.img}}" alt="Product Image"/>
+                    <div class="product-status">
+                        <span>New</span>
+                        <span>{{item.saleSate}}</span>
+                    </div>
+                    <div class="product-action">
+                        <a href=""><i class="fa fa-eye"></i></a>
+                        <a href=""><i class="fa fa-shopping-bag"></i></a>
+                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="product-content">
+                    <div class="product-title">
+                        <h2><a ui-sref="home.product.item({itemName:item.name})">{{item.name}}</a></h2>
+                    </div>
+                    <div class="product-ratting">
+                        <i ng-repeat="star in items.range(0,item.star)" class="fa fa-star"></i>
+                        <!-- <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i> -->
+                        <i ng-repeat="star in items.range(0,item.halfstar)" class="fa fa-star-o"></i>
+                    </div>
+                    <div class="product-price">
+                        <h2>${{item.dicountPrice}}</h2>
+                        <h2>${{item.price}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</ui-view>

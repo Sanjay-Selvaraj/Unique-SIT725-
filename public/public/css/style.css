@@ -1,0 +1,249 @@
+/* ------------------ General CSS ------------------ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background: #ffffff;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 30px 0 15px 0;
+}
+
+.grid-title:first-child {
+    margin-top: 15px;
+}
+
+.grid-title h2 {
+    font-size: 35px;
+    font-weight: 800;
+    color: #757575;
+}
+
+
+/* -------------- Product Grid Style --------------- */
+.product-grid {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.product-grid .product-item {
+    width: 25%;
+    padding: 15px;
+}
+
+@media (max-width: 992px) {
+    .product-grid .product-item {
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid .product-item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-grid .product-item {
+        width: 100%;
+    }
+}
+
+.product-grid .product-single {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.product-grid .product-img,
+.product-grid .product-content {
+    position: relative;
+    width: 100%;
+    background: #000000;
+    overflow: hidden;
+}
+
+.product-grid .product-img img {
+    display: block;
+    width: 100%;
+    transition: .3s;
+}
+
+
+
+
+
+/* --- Product Grid 2 --- */
+.product-grid.grid-2 .product-single {
+    border-radius: 5px;
+}
+
+.product-grid.grid-2 .product-single:hover {
+    box-shadow: 0 0 10px #999999;
+}
+
+
+
+.product-grid.grid-2 .product-status {
+    position: absolute;
+    width: 100%;
+    top: 5px;
+    left: 0;
+}
+
+.product-grid.grid-2 .product-status span:first-child {
+    display: inline-block;
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin-left: 5px;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+    background: #FFEC67;
+    border-radius: 45px;
+    opacity: .8;
+}
+
+.product-grid.grid-2 .product-status span:last-child {
+    display: inline-block;
+    float: right;
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+    background: #A67E75;
+    border-radius: 45px;
+    opacity: .8;
+}
+
+.product-grid.grid-2 .product-action {
+    position: absolute;
+    height: 45px;
+    width: 100%;
+    text-align: center;
+    top: calc(50% - 20px);
+    font-size: 0;
+    transition: .3s;
+    opacity: 0;
+}
+
+.product-grid.grid-2 .product-action a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    padding: 11px 0;
+    margin: 0 2px;
+    font-size: 18px;
+    color: #ffffff;
+    background: #D69C2F;
+    border-radius: 40px;
+}
+
+.product-grid.grid-2 .product-action a:hover {
+    background: #252525;
+}
+
+
+.product-grid.grid-2 .product-single:hover .product-action {
+    opacity: 1;
+}
+
+.product-grid.grid-2 .product-content {
+    padding: 15px;
+    border: 1px solid;
+    border-color: transparent #eeeeee #eeeeee #eeeeee;
+    border-radius: 0 0 5px 5px;
+    background: #F3E0DC;
+}
+
+.product-grid.grid-2 .product-title,
+.product-grid.grid-2 .product-ratting,
+.product-grid.grid-2 .product-price {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.product-grid.grid-2 .product-price {
+    margin-bottom: 0;
+}
+
+.product-grid.grid-2 .product-title h2 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.product-grid.grid-2 .product-title h2 a {
+    color: #666666;
+}
+
+.product-grid.grid-2 .product-title h2 a:hover {
+    color: #666666;
+}
+
+.product-grid.grid-2 .product-ratting i {
+    display: inline-block;
+    font-size: 16px;
+    color: #D69C2F;
+}
+
+.product-grid.grid-2 .product-price h2 {
+    display: inline-block;
+    color: #666666;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.product-grid.grid-2 .product-price h2:last-child {
+    margin-left: 10px;
+    color: #666666;
+    font-weight: 200;
+    text-decoration: line-through;
+}
+
+
+
+
+
+

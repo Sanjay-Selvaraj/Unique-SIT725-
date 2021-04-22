@@ -1,0 +1,46 @@
+<main class="container">
+  <link href="style.css" rel="stylesheet">
+  <!-- Left Column / Headphones Image -->
+  <div class="left-column">
+    <img data-image="red" class="active" ng-src="{{item.data.img}}" alt="">
+  </div>
+
+  <!-- Right Column -->
+  <div class="right-column">
+    <!-- Product Description -->
+    <div class="product-description">
+      <span>{{item.header}}</span>
+      <h1>{{item.data.name}}</h1>
+      <p>{{item.data.long_description}}</p>
+    </div>
+    <!-- Product Configuration -->
+    <div class="product-configuration">
+      <!-- Product Color -->
+      <div class="product-color">
+        <span>Color</span>
+        <div class="color-choose">
+          <div>
+            <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+            <label for="red"><span style="background-color: {{item.data.color}};"></span></label>
+          </div>
+        </div>
+      </div>
+      <!-- Cable Configuration -->
+      <div class="cable-config">
+        <span>{{item.header}} Features</span>
+        <div class="cable-choose">
+          <button ng-repeat="feature in item.data.features">{{feature}}</button>
+        </div>
+        <a href="#">Experience In AR before you buy</a>
+      </div>
+    </div>
+
+    <!-- Product Pricing -->
+    <div class="product-price">
+      <span>{{item.data.price}}$</span>
+      <a href="#" class="cart-btn"><b>Add to cart</b></a><br>
+      <a href="#" class="cart-btn1"><b>View In AR</b></a>
+    </div>
+  </div>
+  <br>
+</main>
